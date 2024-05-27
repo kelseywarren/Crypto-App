@@ -4,7 +4,7 @@ const axios = require('axios');
 const port = 5500;
 const apiKey = "b389ed0c-d634-4243-841d-f38788db5e9c";
 
-app.get("/", (request, response) => {
+app.get("/api", (request, response) => {
     axios
       .get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/map?limit=10", {
         headers: {
