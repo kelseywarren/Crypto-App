@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
 const axios = require('axios');
+const cors = require('cors');
 const port = 5500;
 const apiKey = "b389ed0c-d634-4243-841d-f38788db5e9c";
+
+app.use(cors());
 
 app.get("/api", (req, res) => {
     axios
