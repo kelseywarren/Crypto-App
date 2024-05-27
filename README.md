@@ -1,5 +1,8 @@
 # Crypto App
-Purpose of this project is to get experience with routing external API calls on a server, and displaying data to client
+Main purpose of this project is to get experience with:
+1) Setting up a backend server
+2) Routing external API calls through a backend
+3) Serving API data from backend to frontend
 
 ## Features
 More info to be added 
