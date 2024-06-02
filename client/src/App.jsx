@@ -18,8 +18,10 @@ function App() {
     <div>
       {backendData.map((crypto, index) => {
         return (
-          <div>
-            <span><p key={index}>{crypto.cmc_rank} {crypto.name} {crypto.symbol} ${crypto.quote.USD.price}</p></span>
+          <div className="cryptoContainer">
+            <span>
+              <p className="card" key={index}><span className="rank">{crypto.cmc_rank}</span> {crypto.name} {crypto.symbol} ${(crypto.quote.USD.price).toLocaleString(undefined, {minimumFractionDigits: 6})}</p>
+              </span>
           </div>
         )
       })}

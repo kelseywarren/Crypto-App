@@ -40,3 +40,18 @@
 .read-the-docs {
   color: #888;
 }
+
+.cryptoContainer {
+  margin-right: auto;
+  margin-left: auto;
+  border-bottom: 1px solid rgb(224, 221, 199);
+
+}
+
+.card {
+  margin-right: 100%
+}
+
+.rank {
+  font-weight: bold;
+}
