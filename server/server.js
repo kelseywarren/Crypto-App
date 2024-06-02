@@ -24,6 +24,23 @@ app.get("/api", (req, res) => {
       });
   });
 
+  app.get("/info", (req, res) => {
+    axios
+    .get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/info?symbol=BTC,ETH,LINK,HBAR,JASMY,LRC", {
+      headers: {
+        "X-CMC_PRO_API_KEY": `${apiKey}`,
+      },
+    })
+    .then((response) => {
+        console.log(response.data.data);
+        res.json(response.data);
+    })
+    .catch((error) => {
+        console.log(error);
+    });
+  });
+
+
 app.listen(port, () => {
     console.log(`server listening on port ${port}`); 
 })
