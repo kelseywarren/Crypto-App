@@ -4,6 +4,7 @@ import './App.css'
 function App() {
 
   const [backendData, setBackendData] = useState([]);
+  const [info, setInfo] = useState([]);
 
   useEffect(() => {
     fetch("http://localhost:5500/api")
@@ -14,8 +15,18 @@ function App() {
     })
   }, [])
 
+  useEffect(() => {
+    fetch("http://localhost:5500/info")
+    .then(response => response.json())
+    .then(data => {
+      console.log(data.BTC[0].logo)
+      setInfo(data.BTC[0])
+    })
+  }, [])
+
   return (
     <div>
+      <img src={info.logo}></img>
       {backendData.map((crypto, index) => {
         return (
           <div>
