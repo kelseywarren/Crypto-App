@@ -9,20 +9,41 @@ app.use(cors());
 
 app.get("/api", (req, res) => {
     axios
-      .get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=10", {
+      .get("https://pro-api.coinmarketcap.com/v1/cryptocurrency/listings/latest?limit=100", {
         headers: {
           "X-CMC_PRO_API_KEY": `${apiKey}`,
         },
       })
       .then((response) => {
-        console.log(response.data);
-        res.json(response.data) // sends json data to localhost
+        console.log(response.data.data[0].name);
+
+        // send json data to local host 
+        res.json(response.data) 
+
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  });
+  
+  app.get("/info", (req, res,) => {
+    axios
+      .get(`https://pro-api.coinmarketcap.com/v2/cryptocurrency/info?symbol=`, {
+        headers: {
+          "X-CMC_PRO_API_KEY": `${apiKey}`,
+        },
+      })
+      .then((response) => {
+        console.log(response.data.data);
+        res.json(response.data.data);
       })
       .catch((error) => {
         console.log(error);
       });
   });
 
+
 app.listen(port, () => {
     console.log(`server listening on port ${port}`); 
 })
+
