@@ -16,32 +16,13 @@ app.get("/api", (req, res) => {
       })
       .then((response) => {
         console.log(response.data.data[0].name);
-
-        // send json data to local host 
-        res.json(response.data) 
+        res.json(response.data) // send json data to local host 
 
       })
       .catch((error) => {
         console.log(error);
       });
   });
-  
-  app.get("/info", (req, res,) => {
-    axios
-      .get(`https://pro-api.coinmarketcap.com/v2/cryptocurrency/info?symbol=`, {
-        headers: {
-          "X-CMC_PRO_API_KEY": `${apiKey}`,
-        },
-      })
-      .then((response) => {
-        console.log(response.data.data);
-        res.json(response.data.data);
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  });
-
 
 app.listen(port, () => {
     console.log(`server listening on port ${port}`); 
