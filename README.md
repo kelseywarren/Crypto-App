@@ -1,4 +1,4 @@
-# Crypto App
+# Crypto List
 Main purpose of this project is to get experience with:
 1) Setting up a backend server
 2) Routing external API calls through the backend
