@@ -1,4 +1,4 @@
-# Crypto List
+# Crypto App
 Main purpose of this project is to get experience with:
 1) Setting up a backend server
 2) Routing external API calls through the backend
@@ -16,5 +16,3 @@ Main purpose of this project is to get experience with:
 - CSS
 - CoinMarketCap API
   
-## Note
-Quick mini-project to exercise basic fundamentals of using a backend to route external API calls to the front end. 
