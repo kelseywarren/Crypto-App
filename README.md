@@ -16,3 +16,7 @@ Main purpose of this project is to get experience with:
 - CSS
 - CoinMarketCap API
   
+## Note
+In the CoinMarketCap API documentation it states it will throw a CORS error if 
+requests are made from the client. This inspired the desire to figure out how to solve this issue by 
+routing requests through the backend. 
